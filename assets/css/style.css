@@ -1,0 +1,234 @@
+:root {
+  --primary-color: #d93a34;
+  --dark: #000000;
+  --white: #ffffff;
+}
+
+* {
+  font-family: "poppins";
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: dotted underline;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* ==================================*/
+/* ======= slider-section ======= */
+/* =================================== */
+
+.slider-section .slide-item {
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 650px;
+  padding: 90px 0px 0px 0px;
+}
+
+.slider-section .slider-item {
+  margin: 0px 20px;
+}
+
+.slider-section .slider-image {
+  display: none;
+}
+
+.slider-section .slide-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.815) 20%,
+      rgba(8, 8, 8, 0));
+  z-index: -1;
+}
+
+.slider-section .slider-content {
+  display: flex;
+  flex-direction: column;
+  width: 54%;
+}
+
+.slider-section .slider-content h2 {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.slider-section .slider-content p {
+  font-size: 16px;
+  color: var(--white);
+  line-height: 1.5em;
+  margin: 10px 0px 40px 0px;
+}
+
+.slider-section .slider-item a {
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.slider-section .slider-item a:hover {
+  background-color: #8b0a03;
+}
+
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(1) {
+  position: absolute;
+  bottom: 65px;
+  right: 280px;
+}
+
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(2) {
+  position: absolute;
+  bottom: 65px;
+  right: 210px;
+}
+
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(3) {
+  position: absolute;
+  bottom: 65px;
+  right: 140px;
+}
+
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(1):focus img,
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(2):focus img,
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(3):focus img {
+  border: 4px solid #007cba;
+}
+
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(1):focus::before,
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(2):focus::before,
+.slider-section .owl-thumbs .owl-thumb-item:nth-child(3):focus::before {
+  visibility: hidden;
+}
+
+.slider-section .owl-thumb-item {
+  object-fit: cover;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background: none;
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.slider-section .owl-thumb-item img {
+  height: 41px;
+  width: 41px;
+  border-radius: 50%;
+}
+
+.slider-section .owl-thumb-item.active::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  inset: 4px;
+  border-radius: 50%;
+  border: 4px solid white;
+  animation: prixClipFix 5s linear;
+}
+
+@keyframes prixClipFix {
+  from {
+    transform: rotate(220deg);
+  }
+
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  to {
+    transform: rotate(220deg);
+  }
+}
+
+.slider-section .slider-links-main {
+  display: flex;
+  align-items: end;
+  margin: 100px 20px 0px 20px;
+}
+
+.slider-section .link-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.288);
+  margin-right: 15px;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.slider-section .link-item span {
+  font-size: 11px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-weight: 300;
+  margin: 20px 0px;
+}
+
+.slider-section .link-item a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.slider-section .link-item i {
+  color: #f53f36;
+  transform: rotate(50deg);
+  margin-left: 3px;
+}
+
+.slider-section .slider-item {
+  position: relative;
+}
+
+.slider-section .controls {
+  right: 75px;
+  bottom: 65px;
+  height: 41px;
+  width: 41px;
+  border-radius: 50%;
+  background-color: #4f4f4f;
+  border: none;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
