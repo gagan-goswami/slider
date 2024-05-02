@@ -3,7 +3,7 @@
 $(document).ready(function () {
     // Initialize Owl Carousel
     var slider = $('.slider-2').owlCarousel({
-        autoplay: false,
+        autoplay: true,
         loop: true,
         nav: false,
         margin: 10,
